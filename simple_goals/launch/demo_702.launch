@@ -1,0 +1,3 @@
+<launch>
+  <node name="demo_702" pkg="simple_goals" type="demo_702_simple" args="$(find simple_goals)/music/charging_end.wav $(find simple_goals)/music/set_out.wav $(find simple_goals)/music/blocked.wav $(find simple_goals)/music/arrive.wav $(find simple_goals)/music/start_charging.wav" output="screen"/>
+</launch>

@@ -1,0 +1,7 @@
+<launch>	
+
+  <include file="$(find simple_goals)/launch/includes/move_base.launch.xml">
+  </include>
+
+  <node pkg="tf" type="static_transform_publisher" name="odom_to_map" args="0 0 0 0 0 0 odom map 100" />
+</launch>
