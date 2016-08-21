@@ -1,12 +1,7 @@
 <launch>
 
   <include file="$(find turtlebot_bringup)/launch/minimal.launch" />
-  <node pkg="urg_node" type="urg_node" name="urg_node">
-    <param name="serial_port" value="/dev/hokuyo"/>
-    <param name="angle_min" value="-1.9"/>
-    <param name="angle_max" value="1.9"/>
-  </node>
-
-  <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0 0 0 0 0 0 base_link laser 100" />
+  <include file="$(find navi_launch)/launch/urg_serial.launch" />
+  <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0.13 0 0.16 0 0 3.14159 base_link laser 100" />
 
 </launch>

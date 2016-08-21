@@ -31,7 +31,7 @@ void MainWindow::_btn1_clicked()
 {
 	QLabel *lb = new QLabel("to eat clicked");
 	lb->setFixedSize(200, 100);
-	1lb->show();
+	lb->show();
 }
 
 void MainWindow::_btn2_clicked()
