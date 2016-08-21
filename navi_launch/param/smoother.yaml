@@ -1,0 +1,25 @@
+# Default parameters used by the yocs_velocity_smoother module.
+# This isn't used by minimal.launch per se, rather by everything
+# which runs on top.
+
+# Original file is located in turtlebot_bringup.
+# This is one is for tuning our turtlebot to be more friendly.
+
+# Mandatory parameters
+speed_lim_v: 0.5
+speed_lim_w: 5.4
+
+accel_lim_v: 1.0 # maximum is actually 2.0, but we push it down to be smooth
+accel_lim_w: 3.5
+
+# Optional parameters
+frequency: 20.0
+decel_factor: 1.5
+
+# Robot velocity feedback type:
+#  0 - none (default)
+#  1 - odometry
+#  2 - end robot commands
+#  default: 2
+robot_feedback: 2 
+
