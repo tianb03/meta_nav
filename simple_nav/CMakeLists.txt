@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   actionlib
   move_base_msgs
   ecl_linear_algebra
+  sound_play
 )
 
 ## System dependencies are found with CMake's conventions
@@ -104,7 +105,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES simple_nav
+#  LIBRARIES sound_play
 #  CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
@@ -134,6 +135,8 @@ include_directories(
 # add_executable(simple_nav_node src/simple_nav_node.cpp)
 add_executable(single_nav src/simple_nav.cpp)
 add_executable(multi_nav src/square_nav.cpp)
+#add_executable(single_nav_with_sound_play src/simple_nav_with_sound_play.cpp)
+add_executable(wenzhou_sound_play src/wenzhou_test.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
@@ -151,6 +154,13 @@ add_executable(multi_nav src/square_nav.cpp)
    ${catkin_LIBRARIES}
  )
 
+# target_link_libraries(single_nav_with_sound_play 
+#   ${catkin_LIBRARIES}
+# )
+ 
+target_link_libraries(wenzhou_sound_play 
+   ${catkin_LIBRARIES}
+ )
 #############
 ## Install ##
 #############

@@ -4,14 +4,14 @@ global_costmap:
    update_frequency: 1.0
    publish_frequency: 0.5
    static_map: false
-   transform_tolerance: 0.5
+   transform_tolerance: 0.1
    plugins:
      - {name: static_layer,            type: "costmap_2d::StaticLayer"}
      - {name: obstacle_layer,          type: "costmap_2d::VoxelLayer"}
      - {name: inflation_layer,         type: "costmap_2d::InflationLayer"}
    inflation_layer:
      enabled: true
-     inflation_radius: 0.5  # max. distance from an obstacle at which costs are incurred for planning paths.
+     inflation_radius: 0.2  # 0.5 max. distance from an obstacle at which costs are incurred for planning paths.
      cost_scaling_factor:  10.0  # exponential rate at which the obstacle cost drops off (default: 10)
    obstacle_layer:
       scan:
