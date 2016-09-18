@@ -1,0 +1,21 @@
+
+*** These modified files were found in JOE when it aborted on Sat Aug 27 13:48:06 2016
+*** JOE was aborted by UNIX signal 15
+
+*** File '(Unnamed)'
+/home/odroid/catkin_ws/src/meta_nav/.git/MERGE_MSG
+
+*** These modified files were found in JOE when it aborted on Sat Aug 27 13:48:06 2016
+*** JOE was aborted by UNIX signal 15
+
+*** File '(Unnamed)'
+/home/odroid/catkin_ws/src/meta_nav/.git/MERGE_MSG
+
+*** File '/home/odroid/catkin_ws/src/meta_nav/.git/MERGE_MSG'
+Merge remote-tracking branch 'coding/de[Bv' into dev
+
+# Please enter a commit message to uuuueplain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit

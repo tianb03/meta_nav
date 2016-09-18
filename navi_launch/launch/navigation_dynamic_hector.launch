@@ -1,6 +1,6 @@
 <launch>
-  <include file="$(find navi_launch)/launch/gmapping.launch"/>
-
+  <include file="$(find navi_launch)/launch/sys_bringup.launch"/>
+  <include file="$(find navi_launch)/launch/hector_slam.launch"/>
   <include file="$(find tars_slam)/launch/includes/move_base.launch.xml"/>
 </launch>
 
