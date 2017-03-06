@@ -34,11 +34,39 @@
 
 #include <sound_play/sound_play.h>
 #include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 void sleepok(int t, ros::NodeHandle &nh)
 {
   if (nh.ok())
       sleep(t);
+}
+
+int tb_play_sound(int type,const char *path)
+{
+  char cmd_temp[128];
+  if(type)
+  {
+    snprintf(cmd_temp,sizeof(cmd_temp),"aplay -t wav %s \n",path);
+  }
+    else
+  {
+    snprintf(cmd_temp,sizeof(cmd_temp),"aplay -t wav %s &\n",path);
+  }
+  printf("run:%s",cmd_temp);
+
+  int ret;
+  ret=system(cmd_temp);
+  if(ret!=0)
+  {
+    printf("err run system:%s",cmd_temp);
+    return 0;		
+  }
+  else
+  {
+    return 1;		
+  }
 }
 
 int main(int argc, char **argv)
@@ -64,14 +92,16 @@ int main(int argc, char **argv)
     sleepok(4, nh);
     quiet_sc.stopSaying(str1);
 i*/
-    sc.playWave("/home/odroid/wav/hello.wav");
+    sc.playWave("/home/tianbo/wav/hello.wav");
     sleepok(5, nh);
-    sc.playWave("/home/odroid/wav/welcome.wav");
+    sc.playWave("/home/tianbo/wav/welcome.wav");
     sleepok(7, nh);
-    sc.playWave("/home/odroid/wav/intro.wav");
+    sc.playWave("/home/tianbo/wav/intro.wav");
     sleepok(12, nh);
-    sc.playWave("/home/odroid/wav/job_short.wav");
+    sc.playWave("/home/tianbo/wav/job.wav");
     sleepok(20, nh);
+    tb_play_sound(0,"/home/tianbo/wav/job.wav");
+    system("aplay /home/tianbo/wav/intro.wav");
     /*
     quiet_sc.playWave("/usr/share/xemacs21/xemacs-packages/etc/sounds/boing.wav");
     sleepok(2, nh);
