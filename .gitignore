@@ -1,1 +1,16 @@
-*.user*
+*~
+*.swp
+*.user.*
+*.user
+*.autosave
+CMakeLists.txt.user
+qtcreator-*
+*.user
+*.bat
+
+build-*/
+build
+*.pyc
+*.orig
+.tmp
+
