@@ -11,7 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   actionlib
   move_base_msgs
   ecl_linear_algebra
-  sound_play
+#  sound_play
 )
 
 ## System dependencies are found with CMake's conventions
